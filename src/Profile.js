@@ -1,5 +1,6 @@
 import React from 'react';
 import { withAuth0 } from '@auth0/auth0-react';
+import { Container, Col, Row } from 'react-bootstrap'
 
 class Profile extends React.Component {
     render() {
@@ -7,9 +8,19 @@ class Profile extends React.Component {
         console.log(user);
         return (
             <>
-                <h1>Hello {user.name}</h1>
-                <h2> Email: {user.email}</h2>
-                <img alt = "profile" src = {user.picture}></img>
+                <Container fluid>
+                    <Row>
+                        <Col><img alt="profile" src={user.picture}></img></Col>
+                        </Row>
+                        <Row>
+                        <Col><h1>Hello, {user.name}</h1></Col>
+                        </Row>
+                       <Row> <Col><h2> Email: {user.email}</h2></Col>
+                    </Row>
+                </Container>
+
+
+
             </>
         );
     }

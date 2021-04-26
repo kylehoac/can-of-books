@@ -7,7 +7,7 @@ import MyFavoriteBooks from './MyFavoriteBooks.js'
 import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './Footer';
 import { withAuth0 } from "@auth0/auth0-react"
-import {
+import { 
   BrowserRouter as Router,
   Switch,
   Route
@@ -17,12 +17,12 @@ class App extends React.Component {
 
   render() {
     console.log('app', this.props);
-    return(
+    return (
       <>
         <Router>
           <IsLoadingAndError>
-            <Header />
-            <LogoutButton />
+            <Header/>
+            {/* <LogoutButton /> */}
             <Switch>
               <Route exact path="/">
                 {/* TODO: if the user is logged in, render the `MyFavoriteBooks` component, if they are not, render the `Login` component */}
@@ -38,7 +38,7 @@ class App extends React.Component {
             </Switch>
             <Footer />
           </IsLoadingAndError>
-        </Router>
+          </Router>
       </>
     );
   }
