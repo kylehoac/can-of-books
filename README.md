@@ -1,11 +1,47 @@
 # Start your own "Can of Books" App
 
-This repository has starter code to begin work on creating your own online bookshelf.
+## Logistical
 
-## What can books do?
+- Hours : all day
+- Platform: Slack
+- Breaks: As needed (ex: hourly)
+- Plan if falling behind: Grab a TA for help (or Cullen)
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+## Cooperative
 
-## Use this template
+Dion's Strengths:
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+- Figuring out how to make a function work
+
+
+Kyle's Strengths:
+
+
+# Can of Books
+
+**Author**: Kyle, Dion
+**Version**: 1.0.0
+
+## Overview
+
+We're creating an application that allows the user to log in using Auth0
+
+## Getting Started
+
+- Import the Auth0 provider
+- Add log in and log out buttons
+- Add a profile
+- Style with bootstrap
+
+## Architecture
+
+- JavaScript
+- React JS
+- Bootstrap
+- Auth0
+
+## Change Log
+
+
+## Credit and Collaborations
+
