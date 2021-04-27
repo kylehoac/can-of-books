@@ -7,7 +7,7 @@ class Profile extends React.Component {
         const { user } = this.props.auth0;
         console.log(user);
         if(!user) {
-            return <h1>Unauthorized</h1>
+            return <h1>Unauthorized, Please log in</h1>
         }
         return (
             <>
