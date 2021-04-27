@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 import Loginbutton from './Login.js'
-import LogoutButton from './Logout.js'
 import Profile from './Profile.js'
 import MyFavoriteBooks from './MyFavoriteBooks.js'
 import IsLoadingAndError from './IsLoadingAndError';
