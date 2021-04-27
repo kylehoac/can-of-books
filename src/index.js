@@ -7,7 +7,7 @@ ReactDOM.render(
 <Auth0Provider
     domain="dev-y1yealdz.us.auth0.com"
     clientId="77AaOk3jUdAXWJ5M47ycAH3zkwFAdGIP"
-    redirectUri="https://sleepy-kalam-9ad9bc.netlify.app/"
+    redirectUri={window.location.origin}
   >
   <React.StrictMode>
     <App />
