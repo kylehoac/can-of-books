@@ -6,6 +6,9 @@ class Profile extends React.Component {
     render() {
         const { user } = this.props.auth0;
         console.log(user);
+        if(!user) {
+            return <h1>Unauthorized</h1>
+        }
         return (
             <>
                 <Container fluid>
