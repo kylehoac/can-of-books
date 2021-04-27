@@ -5,8 +5,8 @@ import { Auth0Provider } from "@auth0/auth0-react"
 // TODO: wrap everything in Auth0
 ReactDOM.render(
 <Auth0Provider
-    domain="dev-4rwdhvtd.us.auth0.com"
-    clientId="HWQV98E0OwgjRPfHq6GwZCcmO0SfrZHE"
+    domain="dev-y1yealdz.us.auth0.com"
+    clientId="77AaOk3jUdAXWJ5M47ycAH3zkwFAdGIP"
     redirectUri="https://sleepy-kalam-9ad9bc.netlify.app/"
   >
   <React.StrictMode>
