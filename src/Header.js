@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import './Header.css';
 import LogoutButton from './Logout.js'
 import { Container, Col, Row } from 'react-bootstrap'
+import { withAuth0 } from "@auth0/auth0-react"
 
 class Header extends React.Component {
   render() {
@@ -20,7 +21,7 @@ class Header extends React.Component {
               <Col> <Link to="/">Home</Link> </Col>
             </Row>
             <Row>
-              <Col><Link to="/profile">Profile</Link></Col>
+              <Col> {this.props.auth0.isAuthenticated && <Link to="/profile">Profile</Link>} </Col>
             </Row>
           </Container >
         </>
@@ -34,4 +35,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withAuth0(Header);
