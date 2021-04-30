@@ -19,12 +19,12 @@ class App extends React.Component {
     this.state = {
       searchQuery: "",
       books: [],
-      hideForm: true,
+      hideForm: false,
     };
   }
 
-  toggleForm(hideForm) {
-    this.setState({ hideForm });
+  toggleForm(bool) {
+    this.setState({ hideForm: bool });
   }
 
   render() {
@@ -47,29 +47,48 @@ class App extends React.Component {
         this.setState({ books: allBooksArr, hideForm: true });
       }
     };
-
+    // const deleteBooks = async () => {
+    //   const apiUrl = "http://localhost:3002/books/${index}1";
+    //   console.log(this.props);
+    //   const response = await axios.get(apiUrl, {
+    //     params: { email: this.props.auth0.user.email },
+    //   });
+    //   console.log("this is your response", response);
+    //   return this.setState({ books: response.data });
+    // };
+    console.log("app", this.props);
+    console.log(this.props.auth0.isAuthenticated);
     return (
       <>
         <Router>
           <IsLoadingAndError>
             <Header />
-            {this.state.hideForm === true ? (
-              <Button onClick={() => this.toggleForm(false)}>Add Books</Button>
-            ) : (
-              <BookForm
-                getBooks={this.state.getBooks}
-                createBooks={createBooks}
-                onClose={() => this.toggleForm(true)}
-              />
-            )}
+
             <Switch>
               <Route exact path="/">
                 {this.props.auth0.isAuthenticated ? (
-                  <BestBooks
-                    user={this.props.auth0.user}
-                    updateBooks={updateBooks}
-                    books={this.state.books}
-                  />
+
+                  <>
+                    <BestBooks
+                      user={this.props.auth0.user}
+                      updateBooks={updateBooks}
+                      books={this.state.books}
+                    />
+                    <Button onClick={() => this.toggleForm(true)}>Add Books</Button>
+                    {!this.state.hideForm ? '' : (
+                      <BookForm
+                        getBooks={this.state.getBooks}
+                        createBooks={createBooks}
+                        toggleForm={this.toggleFrom}
+                        onClose={() => this.toggleForm(false)}
+
+                      />
+                    )}
+                    <Button onClick={() => this.toggleForm(true)}>Delete Book</Button>
+
+
+                  </>
+
                 ) : (
                   <Loginbutton />
                 )}

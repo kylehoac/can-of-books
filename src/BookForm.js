@@ -32,6 +32,7 @@ class BookFormModal extends React.Component {
     });
     const allBooksArr = books.data;
     this.props.createBooks(allBooksArr);
+    this.props.toggleForm(false);
   };
 
   render() {
@@ -62,10 +63,7 @@ class BookFormModal extends React.Component {
                   onChange={(e) => this.setState({ bookStat: e.target.value })}
                 />
               </Form.Group>
-            </Form>
-          </Modal.Body>
-
-          <Modal.Footer>
+              <Modal.Footer>
             <Button onClick={this.props.onClose} variant="secondary">
               Close
             </Button>
@@ -73,6 +71,10 @@ class BookFormModal extends React.Component {
               Submit
             </Button>
           </Modal.Footer>
+            </Form>
+          </Modal.Body>
+
+        
         </Modal.Dialog>
       </>
     );
