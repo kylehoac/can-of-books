@@ -21,9 +21,6 @@ class Profile extends React.Component {
                        <Row> <Col><h2> Email: {user.email}</h2></Col>
                     </Row>
                 </Container>
-
-
-
             </>
         );
     }
